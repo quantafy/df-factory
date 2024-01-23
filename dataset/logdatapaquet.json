@@ -1,0 +1,64 @@
+{
+	"name": "logdatapaquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dp203datalake01_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "parquet"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Correlationid",
+				"type": "UTF8"
+			},
+			{
+				"name": "Operationname",
+				"type": "UTF8"
+			},
+			{
+				"name": "Status",
+				"type": "UTF8"
+			},
+			{
+				"name": "Eventcategory",
+				"type": "UTF8"
+			},
+			{
+				"name": "Level",
+				"type": "UTF8"
+			},
+			{
+				"name": "Time",
+				"type": "INT96"
+			},
+			{
+				"name": "Subscription",
+				"type": "UTF8"
+			},
+			{
+				"name": "Eventinitiatedby",
+				"type": "UTF8"
+			},
+			{
+				"name": "Resourcetype",
+				"type": "UTF8"
+			},
+			{
+				"name": "Resourcegroup",
+				"type": "UTF8"
+			},
+			{
+				"name": "Resource",
+				"type": "UTF8"
+			}
+		]
+	}
+}
